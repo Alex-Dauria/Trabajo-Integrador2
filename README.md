@@ -11,7 +11,6 @@
 <br>
 
 - **Comisión:** M2025-7
-<br>
 - **Grupo:** 1
 
 ## 📂 Descripción del Repositorio  
