@@ -9,7 +9,7 @@
 - Dauria, Alex Pedro
 - Cordero, Marina Giselle
 <br>
-
+- **Grupo:** 1
 - **Comisión:** M2025-7
 
 ## 📂 Descripción del Repositorio  
