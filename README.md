@@ -9,8 +9,10 @@
 - Dauria, Alex Pedro
 - Cordero, Marina Giselle
 <br>
-- **Grupo:** 1
+
 - **Comisión:** M2025-7
+<br>
+- **Grupo:** 1
 
 ## 📂 Descripción del Repositorio  
 Este repositorio almacena todos los archivos del **Trabajo Integrador 2**.  
