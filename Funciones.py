@@ -1,10 +1,3 @@
-""" 
-Verifica si el número ingresado está entre los elementos de la unión,
-o si la intersección general entre los elementos del conjunto está vacía.
-
-Python cuenta con métodos para trabajar directamente con los conjuntos, como union() e intersection().
-"""
-
 # Función para verificar la unión entre los conjuntos A, B, C, D y E.
 def verificar_union_o_interseccion(conjunto_a, conjunto_b, conjunto_c, conjunto_d, conjunto_e, numero_ingresado):
     # Calcular la unión de todos los conjuntos.
@@ -32,3 +25,6 @@ def es_grupo_sin_ceros(conjunto_a, conjunto_b, conjunto_c, conjunto_d, conjunto_
         0 not in conjunto_d and
         0 not in conjunto_e
     )
+
+
+
