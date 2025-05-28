@@ -25,7 +25,6 @@ def ingreso_anio_nacimiento():
                 print("Ingrese un año válido")
     return anios
 
-
 def cont_pares_impares(anios):
     # Cuenta cuántos años son pares y cuántos impares en la lista recibida
     pares = 0
@@ -84,7 +83,6 @@ def main():
     print(f"Cantidad de miembros que nacieron en años impares: {impares}")
 
     # Verificación Grupo Z
-
     if verificar_grupo_z(anios_nacimiento):
         print("\nGrupo Z")
 
