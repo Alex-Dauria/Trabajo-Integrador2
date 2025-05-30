@@ -97,7 +97,7 @@ def main():
     product_car = producto_cartesiano(anios_nacimiento, edades)
     print("\nProducto cartesiano de edades y años de nacimiento")
     for anio, edad in product_car:
-        print(f"Año: {anio}, Edad: {edad}")
+        print(f"({anio}, {edad})")
         
 if __name__ == "__main__":
     main()
