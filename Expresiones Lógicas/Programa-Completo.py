@@ -1,14 +1,19 @@
+# Lista para almacenar los DNIs ingresados por el usuario
 dnis = []
+# Bucle para solicitar 5 DNIs
 for i in range(5):
     while True:
+        # Solicita un DNI y valida que tenga 8 dígitos numéricos
         dni = input(f"Ingrese el DNI {i+1} (8 dígitos): ")
         if len(dni) == 8 and dni.isdigit():
             dnis.append(dni)
             break
         else:
+            # Si el DNI es válido, se agrega a la lista y se sale del bucle
             print("El DNI debe tener 8 dígitos numéricos.")
 
 # Crear conjuntos de dígitos únicos y asignarlos a variables con nombres específicos
+# Cada conjunto contiene los dígitos únicos del DNI correspondiente
 conjunto_A = set(dnis[0])
 conjunto_B = set(dnis[1])
 conjunto_C = set(dnis[2])
@@ -91,6 +96,7 @@ sumas_por_dni = []
 total_digitos = 0
 
 for dni in dnis:
+    # Convertir cada dígito a entero y sumar
     suma_digitos = sum(int(digito) for digito in dni)  # Suma los dígitos de cada DNI
     sumas_por_dni.append((dni, suma_digitos))
     total_digitos += suma_digitos
@@ -102,9 +108,11 @@ for dni, suma in sumas_por_dni:
 print(f"Suma total de todos los dígitos: {total_digitos}")
 
 # Expresión lógica 1: Dígitos en A o B, pero no en C
+# Usa unión para combinar A y B, y diferencia para excluir C
 expresion_1 = (conjunto_A.union(conjunto_B)).difference(conjunto_C)
 print(f"\nExpresión lógica 1: Dígitos en A o B, pero no en C: {sorted(expresion_1)}")
 
 # Expresión lógica 2: Dígitos en D, pero no en la intersección de C y E
+# Excluye los dígitos comunes de C y E del conjunto D
 expresion_2 = conjunto_D.difference(conjunto_C.intersection(conjunto_E))
 print(f"Expresión lógica 2: Dígitos en D, pero no en C ∩ E: {sorted(expresion_2)}")
