@@ -61,3 +61,6 @@ Desarrollo completo en Python que permite:
 
 ## 🎥 Video de Presentación  
 👉 [YouTube - Presentación del Trabajo Integrador 2](https://youtu.be/ml6DOmdR-Bg)   
+
+## 🔗 Repositorio Original  
+Disponible en GitHub: [https://github.com/Alex-Dauria/Trabajo-Integrador2](https://github.com/Alex-Dauria/Trabajo-Integrador2)
