@@ -28,14 +28,14 @@ print(f"Dígitos únicos del DNI 4 (Conjunto D): {sorted(conjunto_D)}")
 print(f"Dígitos únicos del DNI 5 (Conjunto E): {sorted(conjunto_E)}")
 
 # Calcular la unión de todos los conjuntos
-union_todos = conjunto_A.union(conjunto_B, conjunto_C, conjunto_D, conjunto_E)
+union_todos = conjunto_A |conjunto_B |conjunto_C | conjunto_D | conjunto_E
 print(f"\nUnión de todos los conjuntos: {sorted(union_todos)}")
 
 # Calcular intersecciones solicitadas
-interseccion_A_B = conjunto_A.intersection(conjunto_B)
-interseccion_C_D = conjunto_C.intersection(conjunto_D)
-interseccion_D_E = conjunto_D.intersection(conjunto_E)
-interseccion_todos = conjunto_A.intersection(conjunto_B, conjunto_C, conjunto_D, conjunto_E)
+interseccion_A_B = conjunto_A & conjunto_B
+interseccion_C_D = conjunto_C & conjunto_D
+interseccion_D_E = conjunto_D & conjunto_E
+interseccion_todos = conjunto_A & conjunto_B & conjunto_C & conjunto_D & conjunto_E
 
 # Mostrar intersecciones
 print(f"\nIntersección de Conjunto A y Conjunto B: {sorted(interseccion_A_B)}")
@@ -44,9 +44,9 @@ print(f"Intersección de Conjunto D y Conjunto E: {sorted(interseccion_D_E)}")
 print(f"Intersección de todos los conjuntos: {sorted(interseccion_todos)}")
 
 # Calcular diferencias solicitadas
-diferencia_A_B = conjunto_A.difference(conjunto_B)
-diferencia_C_D = conjunto_C.difference(conjunto_D)
-diferencia_D_E = conjunto_D.difference(conjunto_E)
+diferencia_A_B = conjunto_A - conjunto_B
+diferencia_C_D = conjunto_C - conjunto_D
+diferencia_D_E = conjunto_D - conjunto_E
 
 # Mostrar diferencias
 print(f"\nDiferencia de Conjunto A menos Conjunto B: {sorted(diferencia_A_B)}")
@@ -54,9 +54,9 @@ print(f"Diferencia de Conjunto C menos Conjunto D: {sorted(diferencia_C_D)}")
 print(f"Diferencia de Conjunto D menos Conjunto E: {sorted(diferencia_D_E)}")
 
 # Calcular diferencias simétricas solicitadas
-diferencia_simetrica_A_B = conjunto_A.symmetric_difference(conjunto_B)
-diferencia_simetrica_C_D = conjunto_C.symmetric_difference(conjunto_D)
-diferencia_simetrica_D_E = conjunto_D.symmetric_difference(conjunto_E)
+diferencia_simetrica_A_B = (conjunto_A | conjunto_B) - (conjunto_A & conjunto_B)
+diferencia_simetrica_C_D = (conjunto_C | conjunto_D) - (conjunto_C & conjunto_D)
+diferencia_simetrica_D_E = (conjunto_D | conjunto_E) - (conjunto_D & conjunto_E)
 
 # Mostrar diferencias simétricas
 print(f"\nDiferencia simétrica de Conjunto A y Conjunto B: {sorted(diferencia_simetrica_A_B)}")
@@ -109,10 +109,10 @@ print(f"Suma total de todos los dígitos: {total_digitos}")
 
 # Expresión lógica 1: Dígitos en A o B, pero no en C
 # Usa unión para combinar A y B, y diferencia para excluir C
-expresion_1 = (conjunto_A.union(conjunto_B)).difference(conjunto_C)
+expresion_1 = (conjunto_A | conjunto_B) - conjunto_C
 print(f"\nExpresión lógica 1: Dígitos en A o B, pero no en C: {sorted(expresion_1)}")
 
 # Expresión lógica 2: Dígitos en D, pero no en la intersección de C y E
 # Excluye los dígitos comunes de C y E del conjunto D
-expresion_2 = conjunto_D.difference(conjunto_C.intersection(conjunto_E))
+expresion_2 = conjunto_D - (conjunto_C & conjunto_E)
 print(f"Expresión lógica 2: Dígitos en D, pero no en C ∩ E: {sorted(expresion_2)}")
